@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "B-Mon",
+      "public": "dist/B-Mon",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

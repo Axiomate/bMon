@@ -1,0 +1,31 @@
+<div class="row" style="background-color: #ffffffcc;margin-top: 2rem;">
+    <div class="col-sm-12"  style="margin-top: 20px;">
+        <ol  style="margin-top: 2rem;">
+            <li *ngFor='let q of questionair'>{{q.question}}
+                <div class="row">
+                    <div class="col-sm-12" style="margin-top: 15px;">
+                        <mat-radio-group  *ngIf='q.type==="yn"'>
+                            <mat-radio-button  value="1">&nbsp;Yes</mat-radio-button><br>
+                            <mat-radio-button  value="2">&nbsp;NA</mat-radio-button><br>
+                            <mat-radio-button  value="3">&nbsp;No</mat-radio-button>
+                        </mat-radio-group>
+                        <mat-form-field style="width: 60%;" *ngIf='q.type==="text"'>
+                            <input matInput class="form-control" placeholder="Enter Your Answer">
+                          </mat-form-field>
+                          <mat-form-field style="width: 60%;" *ngIf='q.type==="textarea"'>
+                            <textarea class="form-control" matInput placeholder="Enter Your Answer"></textarea>
+                          </mat-form-field>
+                          <mat-form-field style="width: 40%;" *ngIf='q.type==="select"'>
+                            <mat-select >
+                              <mat-option>Select Location</mat-option>
+                              <mat-option>Dubai</mat-option>
+                              <mat-option>Jidha</mat-option>
+                              <mat-option>Saudi</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+            </li>
+        </ol>        
+    </div>
+</div>
